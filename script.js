@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const downloadPasswordsButton = document.getElementById('download-passwords-button');
     const noteInput = document.getElementById('note');
 
-    // Load saved passwords from localStorage on page load
     function loadPasswordsFromStorage() {
         let passwords = JSON.parse(localStorage.getItem('savedPasswords')) || [];
         passwords.forEach(function (entry) {
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    loadPasswordsFromStorage(); // Load saved passwords on initial page load
+    loadPasswordsFromStorage();
 
     generatePasswordButton.addEventListener('click', function () {
         const passwordLength = parseInt(passwordLengthInput.value);
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let passwords = JSON.parse(localStorage.getItem('savedPasswords')) || [];
         passwords.push({ password, note });
         localStorage.setItem('savedPasswords', JSON.stringify(passwords));
-        addPasswordToDOM(password, note); // Update UI immediately
+        addPasswordToDOM(password, note);
     }
 
     function addPasswordToDOM(password, note) {
@@ -82,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function clearPasswords() {
         localStorage.removeItem('savedPasswords');
-        savedPasswordsList.innerHTML = ''; // Clear UI
+        savedPasswordsList.innerHTML = '';
     }
 
     function downloadPasswords() {
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return entry.password !== passwordToDelete;
         });
         localStorage.setItem('savedPasswords', JSON.stringify(passwords));
-        displaySavedPasswords(); // Update UI after deletion
+        displaySavedPasswords();
     }
 
     function displaySavedPasswords() {
@@ -126,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('beforeunload', function () {
-        // Save passwords to localStorage before page unload
         let passwords = Array.from(savedPasswordsList.children).map(function (li) {
             const password = li.querySelector('.password-item').textContent;
             const note = li.querySelector('.note-item').textContent.replace('Note: ', '');
@@ -144,11 +142,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 preloader.style.display = 'none';
                 app.style.display = 'block';
                 app.style.opacity = '1';
-            }, 500); // Adjusted timing to 500ms
-        }, 500); // Adjusted timing to 500ms
+            }, 500);
+        }, 500);
     }
 
-    // Call showApp to display the app after content is loaded
     showApp();
 });
 
@@ -159,12 +156,12 @@ function toggleOptions() {
 
 function changeGradient(direction, color1, color2) {
     const body = document.body;
-    body.style.background = `linear-gradient(${direction}, ${color1}, ${color2})`; // Fixed the template literal
+    body.style.background = `linear-gradient(${direction}, ${color1}, ${color2})`;
 }
 
 function resetColors() {
     const body = document.body;
-    body.style.background = '#2f3337'; /* Reset to default IntelliJ dark background */
+    body.style.background = '#2f3337';
 }
 
 let offsetX = 0;
