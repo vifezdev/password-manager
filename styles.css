@@ -5,11 +5,10 @@
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #2f3337; /* IntelliJ dark background */
-    color: #abb2bf; /* IntelliJ light text */
+    background-color: #2f3337;
+    color: #abb2bf;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +23,7 @@ body {
     max-width: 1200px;
     margin: 20px;
     padding: 40px;
-    background-color: #2f343f; /* Darker container background */
+    background-color: #2f343f;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -36,7 +35,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #2f3337; /* Dark background */
+    background-color: #2f3337;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,8 +46,8 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.3); /* White with opacity */
-    border-top-color: #528bff; /* IntelliJ blue */
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #528bff;
     animation: spin 0.5s linear infinite;
 }
 
@@ -60,7 +59,7 @@ body {
 
 /* Heading styles */
 h1, h2 {
-    color: #abb2bf; /* IntelliJ light text */
+    color: #abb2bf;
     margin-bottom: 20px;
 }
 
@@ -81,30 +80,30 @@ form {
 }
 
 label {
-    color: #d7dae0; /* IntelliJ form label color */
+    color: #d7dae0;
     font-size: 16px;
 }
 
 input, textarea {
     padding: 12px;
     font-size: 16px;
-    background-color: #3c4049; /* IntelliJ dark input background */
-    border: 1px solid #464a52; /* IntelliJ input border */
-    color: #d7dae0; /* IntelliJ input text color */
+    background-color: #3c4049;
+    border: 1px solid #464a52;
+    color: #d7dae0;
     border-radius: 5px;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: #5c6370; /* IntelliJ input focus border color */
+    border-color: #5c6370;
 }
 
 /* Button styles */
 button {
     padding: 12px 24px;
     font-size: 16px;
-    background-color: #528bff; /* IntelliJ blue button background */
-    color: #ffffff; /* White button text */
+    background-color: #528bff;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -112,7 +111,7 @@ button {
 }
 
 button:hover {
-    background-color: #4360d6; /* Darker blue on hover */
+    background-color: #4360d6;
     transform: scale(1.05);
 }
 
@@ -125,17 +124,17 @@ ul {
 li {
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #3c4049; /* IntelliJ dark list item background */
+    background-color: #3c4049;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s, box-shadow 0.2s;
-    filter: blur(5px); /* Apply blur effect */
+    filter: blur(5px);
 }
 
 li:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    filter: none; /* Remove blur on hover */
+    filter: none;
 }
 
 .password-info {
@@ -145,15 +144,15 @@ li:hover {
 }
 
 .password-info p {
-    color: #abb2bf; /* IntelliJ light text */
+    color: #abb2bf;
     font-size: 16px;
 }
 
 .password-info button {
     padding: 8px 16px;
     font-size: 14px;
-    background-color: #528bff; /* IntelliJ blue button background */
-    color: #ffffff; /* White button text */
+    background-color: #528bff;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -161,7 +160,7 @@ li:hover {
 }
 
 .password-info button:hover {
-    background-color: #4360d6; /* Darker blue on hover */
+    background-color: #4360d6;
     transform: scale(1.05);
 }
 
@@ -170,8 +169,8 @@ li:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #528bff; /* IntelliJ blue button background */
-    color: #ffffff; /* White button text */
+    background-color: #528bff;
+    color: #ffffff;
     border: none;
     padding: 12px;
     border-radius: 5px;
@@ -182,7 +181,7 @@ li:hover {
 }
 
 .options-button:hover {
-    background-color: #4360d6; /* Darker blue on hover */
+    background-color: #4360d6;
 }
 
 /* Options popup */
@@ -191,8 +190,8 @@ li:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #3c4049; /* IntelliJ dark background */
-    color: #abb2bf; /* IntelliJ light text */
+    background-color: #3c4049;
+    color: #abb2bf;
     border: none;
     border-radius: 12px;
     padding: 20px;
@@ -217,13 +216,13 @@ li:hover {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #abb2bf; /* IntelliJ light text */
+    color: #abb2bf;
 }
 
 .close-button {
     cursor: pointer;
-    color: #ffffff; /* White text */
-    background-color: #ff5c5c; /* Red close button background */
+    color: #ffffff;
+    background-color: #ff5c5c;
     border: none;
     padding: 8px;
     border-radius: 50%;
@@ -232,7 +231,7 @@ li:hover {
 }
 
 .close-button:hover {
-    background-color: #e84141; /* Darker red on hover */
+    background-color: #e84141;
 }
 
 .options-content {
@@ -240,7 +239,7 @@ li:hover {
 }
 
 .gradient-option {
-    background: linear-gradient(to right, #f093fb, #f5576c); /* Pink gradient */
+    background: linear-gradient(to right, #f093fb, #f5576c);
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -248,8 +247,8 @@ li:hover {
 }
 
 .reset-button {
-    background-color: #ff5c5c; /* Red reset button */
-    color: #ffffff; /* White button text */
+    background-color: #ff5c5c;
+    color: #ffffff;
     border: none;
     padding: 8px 16px;
     border-radius: 5px;
@@ -260,11 +259,11 @@ li:hover {
 }
 
 .reset-button:hover {
-    background-color: #e84141; /* Darker red on hover */
+    background-color: #e84141;
 }
 
 .copy-icon:hover {
-    color: #ffffff; /* White icon color on hover */
+    color: #ffffff;
 }
 
 /* Responsive adjustments */
