@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Password Manager</title>
+</head>
+
+<body>
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container" id="app" style="display: none;">
+        <h1>Password Manager</h1>
+
+        <form id="password-form">
+            <label for="password-length">Password Length</label>
+            <input type="number" id="password-length" name="password-length" min="4" max="32" value="12">
+
+            <button type="button" id="generate-password">Generate Password</button>
+
+            <label for="generated-password">Generated Password</label>
+            <input type="text" id="generated-password" name="generated-password" readonly>
+
+            <label for="note">Note (optional)</label>
+            <textarea id="note" name="note" rows="2"></textarea>
+
+            <button type="button" id="save-password">Save Password</button>
+        </form>
+
+        <h2>Saved Passwords</h2>
+        <ul id="saved-passwords"></ul>
+
+        <button id="clear-passwords-button">Clear All Passwords</button>
+        <button id="download-passwords-button">Download Passwords</button>
+
+        <button class="options-button" onclick="toggleOptions()">Options <i class="fas fa-cog"></i></button>
+
+        <div class="options-popup" id="optionsPopup" onmousedown="startDragging(event)">
+            <div class="options-header">
+                <h2>Options</h2>
+                <button class="close-button" onclick="toggleOptions()">X</button>
+            </div>
+            <div class="options-content">
+                <div class="gradient-option" onclick="changeGradient('to right', '#f093fb', '#f5576c')">Pink Gradient</div>
+                <div class="gradient-option" onclick="changeGradient('to right', '#ff9966', '#ff5e62')">Orange Gradient</div>
+                <div class="gradient-option" onclick="changeGradient('to right', '#4facfe', '#00f2fe')">Blue Gradient</div>
+                <button class="reset-button" onclick="resetColors()">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
